@@ -41,7 +41,7 @@ def parse(url, user_id):
     response = requests.get(url, headers = HEADERS)
     soup = bs4.BeautifulSoup(response.content, 'html.parser')
  
-    items = soup.find_all('h3', class_ = 'item-title')
+    items = soup.find_all('h3', class_='item-title')
     user_id = str(user_id)
     urls = {}
     urls_list = []
